@@ -9,9 +9,13 @@ endpoints:
     sensitive: false
 eureka:
   instance:
+    preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
   client:
+    region: default
     registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:192.168.99.100}:${EUREKA_PORT:8761}/eureka/
 
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 ribbon:

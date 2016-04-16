@@ -1,7 +1,6 @@
-FROM    java:7
+FROM java:7
 
 VOLUME /tmp
-MAINTAINER dsyer@pivotal.io
 
 ADD app.jar /app.jar
 RUN bash -c 'touch /app.jar'

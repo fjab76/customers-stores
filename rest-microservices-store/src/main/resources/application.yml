@@ -19,11 +19,15 @@ spring:
 
 eureka:
   instance:
+    preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
+    region: default
     registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
 
 logging:
   level:
