@@ -20,14 +20,17 @@ stores:
 
 eureka:
   instance:
+    preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
     region: default
     registryFetchIntervalSeconds: 5
-    availabilityZones: 
-      default: ${APPLICATION_DOMAIN:${DOMAIN:defaultZone}}
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+    #availabilityZones:
+      #default: ${APPLICATION_DOMAIN:${DOMAIN:defaultZone}}
 
 # For demo only allow more hystrix connections
 hystrix:
