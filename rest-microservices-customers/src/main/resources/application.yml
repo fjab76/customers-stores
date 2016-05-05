@@ -12,7 +12,7 @@ endpoints:
 integration:
   stores:
     uri: http://localhost:8081
-    test: '{cipher}316f8cdbb776c23e679bf209014788a6eab7522f48f97114328c2c9388e6b3c1'
+    test: '{cipher}CiCW798w++VEme0XUVPnOTwn1utyvhOeGwSTzwzT7q9MvRKTAQEBAgB4lu/fMPvlRJntF1FT5zk8J9brcr4TnhsEk88M0+6vTL0AAABqMGgGCSqGSIb3DQEHBqBbMFkCAQAwVAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAyjqOgp4m0+u2D+3h0CARCAJ+yMkS9FkYy28aNQuWjLfhSsZG17874KwtJOj5hyeM6hsUANYWbu9w=='
 
 stores:
   ribbon:

@@ -51,8 +51,13 @@ public class StoreIntegration {
 	@Setter
 	private String uri = "http://localhost:8081/stores";
 
+	@Getter
+	@Setter
+	private String test = "xxx";
+
 	@HystrixCommand(fallbackMethod = "defaultLink")
 	public Link getStoresByLocationLink(Map<String, Object> parameters, String host, Integer port) {
+		log.info("test:{}",test);
 		URI storesUri = URI.create(uri);
 
 		ServiceInstance instance = null;
